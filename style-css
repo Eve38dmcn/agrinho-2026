@@ -1,186 +1,163 @@
-/* Reset e Variáveis de Cores Inovadoras (Vibe Cyber-Agro) */
+/* Cores Vivas, Quentes e Muito Coloridas */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Comic Sans MS', 'Fredoka One', cursive, sans-serif; /* Fonte mais amigável */
 }
 
 :root {
-    --bg-principal: #0b1311;
-    --bg-card: #142421;
-    --texto: #e2f4f0;
-    --neon-verde: #39ff14;
-    --neon-azul: #00f0ff;
-    --degrade: linear-gradient(135deg, #39ff14, #00f0ff);
+    --amarelo-sol: #FFDE4D;
+    --laranja-energia: #FF4E26;
+    --verde-folha: #4CCD99;
+    --azul-agua: #007F5F;
+    --creme-fundo: #FFFBEB;
+    --texto-escuro: #2C3E50;
 }
 
 body {
-    background-color: var(--bg-principal);
-    color: var(--texto);
-    line-height: 1.6;
+    background-color: var(--creme-fundo);
+    color: var(--texto-escuro);
+    padding-bottom: 40px;
 }
 
-/* Header */
+/* Header Colorido */
 header {
+    background-color: #ffffff;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 7%;
-    border-bottom: 1px solid rgba(57, 255, 20, 0.2);
-    background: rgba(11, 19, 17, 0.8);
-    backdrop-filter: blur(10px);
-    position: sticky;
-    top: 0;
-    z-index: 100;
+    box-shadow: 0 8px 0px rgba(0,0,0,0.05);
+    border-radius: 0 0 20px 20px;
 }
 
 .logo {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     font-weight: bold;
-    letter-spacing: 2px;
+    color: var(--azul-agua);
 }
 
 .logo span {
-    color: var(--neon-verde);
-    text-shadow: 0 0 10px var(--neon-verde);
+    color: var(--laranja-energia);
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li a {
-    color: var(--texto);
-    text-decoration: none;
-    margin-left: 25px;
-    transition: 0.3s;
-}
-
-nav ul li a:hover {
-    color: var(--neon-azul);
-    text-shadow: 0 0 5px var(--neon-azul);
-}
-
-/* Hero Section */
-.hero {
-    height: 60vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: radial-gradient(circle at center, rgba(0,240,255,0.05) 0%, transparent 70%);
-}
-
-.hero h1 {
-    font-size: 3.5rem;
-    background: var(--degrade);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 15px;
-}
-
-.btn-neon {
-    display: inline-block;
-    margin-top: 25px;
-    padding: 12px 30px;
-    border: 2px solid var(--neon-verde);
-    color: var(--neon-verde);
-    text-decoration: none;
-    font-weight: bold;
-    border-radius: 30px;
-    transition: 0.4s;
-    box-shadow: 0 0 10px rgba(57, 255, 20, 0.2);
-}
-
-.btn-neon:hover {
-    background: var(--neon-verde);
-    color: var(--bg-principal);
-    box-shadow: 0 0 25px var(--neon-verde);
-}
-
-/* Painel Interativo */
-.interactive-box {
-    background: var(--bg-card);
-    padding: 40px;
-    max-width: 800px;
-    margin: 40px auto;
-    border-radius: 15px;
-    border: 1px solid rgba(0, 240, 255, 0.2);
-    text-align: center;
-}
-
-.controls button {
-    background: transparent;
-    color: var(--texto);
-    border: 1px solid var(--texto);
+.badge-recompensa {
+    background-color: var(--amarelo-sol);
     padding: 10px 20px;
-    margin: 15px 5px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: 0.3s;
+    border-radius: 50px;
+    font-weight: bold;
+    border: 3px solid var(--texto-escuro);
 }
 
-.controls button:hover {
-    background: rgba(250,250,250,0.1);
-    border-color: var(--neon-azul);
+/* Boas-Vindas */
+.boas-vindas {
+    text-align: center;
+    margin: 40px auto 20px;
+    padding: 0 20px;
 }
 
-.painel-dados {
-    margin-top: 30px;
-    padding: 20px;
-    background: rgba(0,0,0,0.3);
-    border-radius: 10px;
-    animation: fadeIn 0.5s ease;
+.boas-vindas h1 {
+    font-size: 3rem;
+    color: var(--laranja-energia);
+    margin-bottom: 10px;
 }
 
-.escondido {
-    display: none;
+/* Painel de Cultivo Criativo */
+.estacao-cultivo {
+    background: #ffffff;
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 40px;
+    border-radius: 30px;
+    border: 4px solid var(--texto-escuro);
+    box-shadow: 8px 8px 0px var(--texto-escuro);
+    text-align: center;
 }
 
-.metricas {
-    display: flex;
-    justify-content: space-around;
-    margin-top: 20px;
+.emojizao {
+    font-size: 6rem;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
 }
 
-.card-metrica {
-    background: rgba(57, 255, 20, 0.05);
-    padding: 15px;
-    border-radius: 8px;
-    border-left: 4px solid var(--neon-verde);
+.emojizao:hover {
+    transform: scale(1.2) rotate(5deg);
 }
 
-/* Cards de Informação */
-.cards-section {
+#status-planta {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+/* Botões Estilo Jogo */
+.botoes-acao {
     display: flex;
     justify-content: center;
-    gap: 20px;
-    padding: 40px 7%;
+    gap: 15px;
 }
 
-.card {
-    background: var(--bg-card);
+.btn-acao {
+    border: 3px solid var(--texto-escuro);
+    padding: 12px 20px;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 15px;
+    cursor: pointer;
+    box-shadow: 0 5px 0px var(--texto-escuro);
+    transition: all 0.1s;
+}
+
+.btn-acao:active {
+    transform: translateY(5px);
+    box-shadow: 0 0px 0px var(--texto-escuro);
+}
+
+.btn-agua { background-color: #A0E7E5; }
+.btn-sol { background-color: var(--amarelo-sol); }
+.btn-papo { background-color: #FFAAA6; }
+
+/* Cards de Curiosidades */
+.curiosidades {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    margin-top: 50px;
+    padding: 0 20px;
+}
+
+.card-divertido {
+    background-color: var(--verde-folha);
+    color: white;
     padding: 25px;
-    border-radius: 10px;
-    width: 300px;
-    transition: 0.3s;
+    border-radius: 20px;
+    width: 280px;
+    position: relative;
+    border: 3px solid var(--texto-escuro);
+    box-shadow: 5px 5px 0px var(--texto-escuro);
 }
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+.card-divertido h4 {
+    margin: 15px 0 10px 0;
+    font-size: 1.3rem;
+}
+
+.icone-card {
+    font-size: 2rem;
+    background: white;
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute;
+    top: -25px;
+    left: 20px;
+    border: 3px solid var(--texto-escuro);
 }
 
 footer {
     text-align: center;
-    padding: 30px;
-    font-size: 0.9rem;
-    color: rgba(226, 244, 240, 0.5);
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
+    margin-top: 60px;
+    font-weight: bold;
+    color: var(--azul-agua);
 }
