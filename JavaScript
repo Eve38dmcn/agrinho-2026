@@ -42,3 +42,4 @@ function analisarCultura(nomeCultura) {
         txtStatus.innerText = dadosCulturas[nomeCultura].status;
     }, 400); // 400 milissegundos para simular o scanner da IA
 }
+
