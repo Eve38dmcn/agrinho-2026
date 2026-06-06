@@ -1,0 +1,44 @@
+// Banco de dados simulado das culturas agro-tecnológicas
+const dadosCulturas = {
+    Soja: {
+        umidade: "42%",
+        carbono: "+24% Retenção",
+        status: "Excelente (IA Monitorada)"
+    },
+    Milho: {
+        umidade: "38%",
+        carbono: "+18% Retenção",
+        status: "Atenção - Irrigação Ativada"
+    },
+    Trigo: {
+        umidade: "45%",
+        carbono: "+30% Retenção",
+        status: "Pronto para Colheita Sustentável"
+    }
+};
+
+function analisarCultura(nomeCultura) {
+    // Captura os elementos da tela
+    const painel = document.getElementById('painel-dados');
+    const txtNome = document.getElementById('nome-cultura');
+    const txtUmidade = document.getElementById('val-umidade');
+    const txtCarbono = document.getElementById('val-carbono');
+    const txtStatus = document.getElementById('val-status');
+
+    // Revela o painel removendo a classe 'escondido'
+    painel.classList.remove('escondido');
+
+    // Insere um efeito de "carregando" rápido antes de exibir os dados
+    txtNome.innerText = "Escaneando...";
+    txtUmidade.innerText = "...";
+    txtCarbono.innerText = "...";
+    txtStatus.innerText = "...";
+
+    setTimeout(() => {
+        // Aplica os dados baseados no clique do usuário
+        txtNome.innerText = nomeCultura;
+        txtUmidade.innerText = dadosCulturas[nomeCultura].umidade;
+        txtCarbono.innerText = dadosCulturas[nomeCultura].carbono;
+        txtStatus.innerText = dadosCulturas[nomeCultura].status;
+    }, 400); // 400 milissegundos para simular o scanner da IA
+}
