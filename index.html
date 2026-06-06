@@ -1,91 +1,413 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sementes do Futuro - Eco-Plataforma</title>
+
+    <title>Brasil Verde - Conectando Natureza e Futuro</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
 </head>
+
 <body>
 
+    <!-- Barra de progresso -->
+
+    <div id="progresso"></div>
+
+    <!-- Botão voltar -->
+
+    <button id="topo" onclick="voltarTopo()">
+        ↑
+    </button>
+
+    <!-- Menu -->
+
     <header>
-        <div class="logo">🌱 Sementes do <span>Futuro</span></div>
+
+        <div class="logo">
+            🌱 Brasil Verde
+        </div>
+
         <nav>
-            <a href="#economia" class="nav-link">Bioeconomia</a>
-            <a href="#guia-plantio" class="nav-link">Como Plantar</a>
-            <a href="#produtos" class="nav-link">Eco-Produtos</a>
+
+            <a href="#inicio">Início</a>
+            <a href="#sobre">Sobre</a>
+            <a href="#biodiversidade">Biodiversidade</a>
+            <a href="#tecnologia">Tecnologia</a>
+            <a href="#curiosidades">Curiosidades</a>
+            <a href="#galeria">Galeria</a>
+            <a href="#quiz">Quiz</a>
+            <a href="#fontes">Fontes</a>
+
         </nav>
+
+        <button class="modo" onclick="trocarTema()">
+            🌙
+        </button>
+
     </header>
 
-    <section class="hero-vibrante">
-        <h1>O Ecossistema da Próxima Geração</h1>
-        <p>Aprenda, cultive e entenda o valor financeiro e ambiental do nosso planeta.</p>
-    </section>
+    <!-- Hero -->
 
-    <section id="economia" class="secao-conteudo fundo-azul">
-        <div class="bloco-texto">
-            <span class="tag-categoria">Finanças Verdes</span>
-            <h2>A Economia Circular no Campo</h2>
-            <p>A transição para a agricultura regenerativa e o mercado de crédito de carbono movimentam bilhões globalmente. Investir em solo vivo não apenas protege a biodiversidade, mas também reduz os custos com insumos químicos em até 40%, gerando maior margem de lucro para pequenos e grandes produtores.</p>
-            
-            <div class="container-foto">
-                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Plantação jovem brotando em solo rico">
-                <p class="fonte-foto">Fonte da imagem: Unsplash / Banco de Imagens Livre</p>
-            </div>
-        </div>
-    </section>
+    <section class="hero" id="inicio">
 
-    <section id="guia-plantio" class="secao-conteudo fundo-amarelo">
-        <h2>Guia de Plantio Inteligente</h2>
-        <p>Escolha o que você quer plantar e nosso sistema calcula os passos básicos:</p>
-        
-        <div class="seletor-plantio">
-            <select id="escolha-semente" onchange="atualizarGuia()">
-                <option value="">-- Selecione uma semente --</option>
-                <option value="girassol">Girassol 🌻</option>
-                <option value="tomate">Tomate Cereja 🍅</option>
-                <option value="manjericao">Manjericão 🌿</option>
-            </select>
+        <div class="hero-texto">
+
+            <h1>
+                O Futuro Cresce com Boas Ideias
+            </h1>
+
+            <p>
+
+                Natureza, inovação e responsabilidade ajudam a construir
+                um mundo mais sustentável para as próximas gerações.
+
+            </p>
+
+            <button onclick="document.getElementById('sobre').scrollIntoView()">
+                Descobrir
+            </button>
+
         </div>
 
-        <div id="painel-instrucoes" class="painel-instrucoes escondido">
-            <div class="ilustracao-passo" id="ilustra-passo">🌱</div>
-            <h3 id="titulo-passo">Passo a Passo</h3>
-            <ul id="lista-passos">
-                </ul>
-        </div>
     </section>
 
-    <section id="produtos" class="secao-conteudo fundo-verde">
-        <h2>Produtos Sustentáveis para Conhecer</h2>
-        <p>Inovações do mercado que substituem o plástico e os químicos convencionais:</p>
-        
-        <div class="grade-produtos">
-            <div class="card-produto">
-                <div class="produto-icone">📦</div>
-                <h3>BioEmbalagem de Cogumelo</h3>
-                <p>Embalagens feitas com micélio de fungos. Substituem o plástico e se decompõem no solo em 45 dias, virando adubo.</p>
+    <!-- Sobre -->
+
+    <section id="sobre">
+
+        <h2>
+            🌳 Um Brasil cheio de possibilidades
+        </h2>
+
+        <p>
+
+            O Brasil possui uma das maiores biodiversidades do planeta
+            e reúne diferentes ecossistemas importantes para a vida.
+
+        </p>
+
+        <p>
+
+            A tecnologia vem ajudando a preservar recursos naturais,
+            melhorar a produção de alimentos e reduzir impactos
+            ambientais.
+
+        </p>
+
+        <div class="numeros">
+
+            <div class="numero">
+                <h3 id="contador1">0</h3>
+                <p>Espécies de plantas catalogadas</p>
             </div>
 
-            <div class="card-produto">
-                <div class="produto-icone">💧</div>
-                <h3>Hidrogel Retentor de Água</h3>
-                <p>Polímero biodegradável que absorve a água da chuva e a libera aos poucos para as raízes, reduzindo o consumo de água em 50%.</p>
+            <div class="numero">
+                <h3 id="contador2">0</h3>
+                <p>Biomas brasileiros</p>
             </div>
 
-            <div class="card-produto">
-                <div class="produto-icone">🔋</div>
-                <h3>BioBateria Solar Sensível</h3>
-                <p>Dispositivos de energia que utilizam clorofila e compostos orgânicos para armazenar pequenas cargas para sensores agrícolas.</p>
+            <div class="numero">
+                <h3 id="contador3">0</h3>
+                <p>Tecnologias sustentáveis</p>
             </div>
+
         </div>
+
     </section>
+
+    <!-- Biodiversidade -->
+
+    <section id="biodiversidade">
+
+        <h2>
+            🦜 Biodiversidade
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Florestas</h3>
+
+                <p>
+
+                    As florestas ajudam na conservação da água,
+                    do clima e da vida animal.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Fauna</h3>
+
+                <p>
+
+                    O Brasil abriga milhares de espécies
+                    de animais distribuídos em vários biomas.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Flora</h3>
+
+                <p>
+
+                    A diversidade de plantas é essencial
+                    para o equilíbrio ambiental.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Tecnologia -->
+
+    <section id="tecnologia">
+
+        <h2>
+            🚜 Tecnologia e Sustentabilidade
+        </h2>
+
+        <div class="cards">
+
+            <div class="card">
+
+                <h3>Drones</h3>
+
+                <p>
+
+                    Auxiliam no monitoramento do ambiente
+                    e das áreas de produção.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Sensores</h3>
+
+                <p>
+
+                    Permitem o uso eficiente da água.
+
+                </p>
+
+            </div>
+
+            <div class="card">
+
+                <h3>Energia Solar</h3>
+
+                <p>
+
+                    Fonte limpa e renovável para diversas atividades.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Curiosidades -->
+
+    <section id="curiosidades">
+
+        <h2>
+            💡 Curiosidades
+        </h2>
+
+        <p id="curiosidade">
+
+            Clique no botão para descobrir uma curiosidade.
+
+        </p>
+
+        <button onclick="mostrarCuriosidade()">
+            Nova Curiosidade
+        </button>
+
+    </section>
+
+    <!-- Galeria -->
+
+    <section id="galeria">
+
+        <h2>
+            📸 Galeria
+        </h2>
+
+        <div class="fotos">
+
+            <img src="img/campo.jpg">
+
+            <img src="img/floresta.jpg">
+
+            <img src="img/drone.jpg">
+
+            <img src="img/energia.jpg">
+
+        </div>
+
+    </section>
+
+    <!-- Linha do tempo -->
+
+    <section id="linhaTempo">
+
+        <h2>
+            📅 Caminho da Inovação
+        </h2>
+
+        <div class="timeline">
+
+            <div class="evento">
+                <h3>Passado</h3>
+                <p>Conhecimento tradicional e respeito pela natureza.</p>
+            </div>
+
+            <div class="evento">
+                <h3>Presente</h3>
+                <p>Uso de tecnologias sustentáveis.</p>
+            </div>
+
+            <div class="evento">
+                <h3>Futuro</h3>
+                <p>Mais inovação e preservação ambiental.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- Quiz -->
+
+    <section id="quiz">
+
+        <h2>
+            🎮 Quiz Verde
+        </h2>
+
+        <h3>
+
+            Qual destas práticas ajuda a conservar o solo?
+
+        </h3>
+
+        <button onclick="errado()">
+            Queimar a vegetação
+        </button>
+
+        <button onclick="certo()">
+            Rotação de culturas
+        </button>
+
+        <button onclick="errado()">
+            Desmatamento
+        </button>
+
+        <p id="resultado"></p>
+
+    </section>
+
+    <!-- Frase -->
+
+    <section class="frase">
+
+        <h2>
+            🌎 Mensagem do Dia
+        </h2>
+
+        <p id="frase">
+
+            Pequenas atitudes podem gerar grandes mudanças.
+
+        </p>
+
+        <button onclick="trocarFrase()">
+            Nova Mensagem
+        </button>
+
+    </section>
+
+    <!-- Fontes -->
+
+    <section id="fontes">
+
+        <h2>
+            📚 Fontes e Créditos
+        </h2>
+
+        <h3>Textos</h3>
+
+        <ul>
+
+            <li>EMBRAPA - www.embrapa.br</li>
+
+            <li>FAO - www.fao.org</li>
+
+            <li>IBGE - www.ibge.gov.br</li>
+
+            <li>IPAM Amazônia - www.ipam.org.br</li>
+
+        </ul>
+
+        <h3>Imagens sugeridas</h3>
+
+        <ul>
+
+            <li>Pexels - www.pexels.com</li>
+
+            <li>Unsplash - www.unsplash.com</li>
+
+            <li>Pixabay - www.pixabay.com</li>
+
+        </ul>
+
+    </section>
+
+    <!-- Rodapé -->
 
     <footer>
-        <p>Plataforma Experimental Sementes do Futuro | Conectando Natureza e Conhecimento</p>
+
+        <h2>
+            🌱 Brasil Verde
+        </h2>
+
+        <p>
+
+            Conectando natureza, tecnologia e esperança
+            para um futuro sustentável.
+
+        </p>
+
+        <p>
+
+            Desenvolvido para fins educativos.
+
+        </p>
+
     </footer>
 
     <script src="script.js"></script>
-</body>
-</html>
 
+</body>
+
+</html>
