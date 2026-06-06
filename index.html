@@ -1,1 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sementes do Futuro - Eco-Plataforma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">🌱 Sementes do <span>Futuro</span></div>
+        <nav>
+            <a href="#economia" class="nav-link">Bioeconomia</a>
+            <a href="#guia-plantio" class="nav-link">Como Plantar</a>
+            <a href="#produtos" class="nav-link">Eco-Produtos</a>
+        </nav>
+    </header>
+
+    <section class="hero-vibrante">
+        <h1>O Ecossistema da Próxima Geração</h1>
+        <p>Aprenda, cultive e entenda o valor financeiro e ambiental do nosso planeta.</p>
+    </section>
+
+    <section id="economia" class="secao-conteudo fundo-azul">
+        <div class="bloco-texto">
+            <span class="tag-categoria">Finanças Verdes</span>
+            <h2>A Economia Circular no Campo</h2>
+            <p>A transição para a agricultura regenerativa e o mercado de crédito de carbono movimentam bilhões globalmente. Investir em solo vivo não apenas protege a biodiversidade, mas também reduz os custos com insumos químicos em até 40%, gerando maior margem de lucro para pequenos e grandes produtores.</p>
+            
+            <div class="container-foto">
+                <img src="https://images.unsplash.com/photo-1592417817098-8f3d6eb19675?auto=format&fit=crop&w=600&q=80" alt="Plantação jovem brotando em solo rico">
+                <p class="fonte-foto">Fonte da imagem: Unsplash / Banco de Imagens Livre</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="guia-plantio" class="secao-conteudo fundo-amarelo">
+        <h2>Guia de Plantio Inteligente</h2>
+        <p>Escolha o que você quer plantar e nosso sistema calcula os passos básicos:</p>
+        
+        <div class="seletor-plantio">
+            <select id="escolha-semente" onchange="atualizarGuia()">
+                <option value="">-- Selecione uma semente --</option>
+                <option value="girassol">Girassol 🌻</option>
+                <option value="tomate">Tomate Cereja 🍅</option>
+                <option value="manjericao">Manjericão 🌿</option>
+            </select>
+        </div>
+
+        <div id="painel-instrucoes" class="painel-instrucoes escondido">
+            <div class="ilustracao-passo" id="ilustra-passo">🌱</div>
+            <h3 id="titulo-passo">Passo a Passo</h3>
+            <ul id="lista-passos">
+                </ul>
+        </div>
+    </section>
+
+    <section id="produtos" class="secao-conteudo fundo-verde">
+        <h2>Produtos Sustentáveis para Conhecer</h2>
+        <p>Inovações do mercado que substituem o plástico e os químicos convencionais:</p>
+        
+        <div class="grade-produtos">
+            <div class="card-produto">
+                <div class="produto-icone">📦</div>
+                <h3>BioEmbalagem de Cogumelo</h3>
+                <p>Embalagens feitas com micélio de fungos. Substituem o plástico e se decompõem no solo em 45 dias, virando adubo.</p>
+            </div>
+
+            <div class="card-produto">
+                <div class="produto-icone">💧</div>
+                <h3>Hidrogel Retentor de Água</h3>
+                <p>Polímero biodegradável que absorve a água da chuva e a libera aos poucos para as raízes, reduzindo o consumo de água em 50%.</p>
+            </div>
+
+            <div class="card-produto">
+                <div class="produto-icone">🔋</div>
+                <h3>BioBateria Solar Sensível</h3>
+                <p>Dispositivos de energia que utilizam clorofila e compostos orgânicos para armazenar pequenas cargas para sensores agrícolas.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>Plataforma Experimental Sementes do Futuro | Conectando Natureza e Conhecimento</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
