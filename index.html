@@ -3,50 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agrinho 2026: O Futuro é AgroTech</title>
+    <title>Agrinho 2026 - Futuro Sustentável</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
-        <div class="logo">AGRINHO <span>2026</span></div>
-        <nav>
-            <ul>
-                <li><a href="#conceito">Conceito</a></li>
-                <li><a href="#simulador">Bio-Simulador</a></li>
-                <li><a href="#info">Inovação</a></li>
-            </ul>
-        </nav>
+        <div class="logo">AGRI<span>NHO</span> 2026</div>
+        <div class="tagline">Equilíbrio, Produção e Tecnologia</div>
     </header>
 
-    <main>
-        <section id="conceito" class="hero">
-            <div class="hero-content">
-                <h1>Do Campo ao Byte</h1>
-                <p>A revolução sustentável da agricultura paranaense conectada com a inteligência do amanhã.</p>
-                <a href="#simulador" class="btn-neon">Iniciar Diagnóstico</a>
-            </div>
-        </main>
+    <section class="hero-banner">
+        <div class="overlay">
+            <h1>Agro Forte, Futuro Sustentável</h1>
+            <p>Descubra como dados reais moldam o equilíbrio entre a mesa do mundo e a preservação do meio ambiente.</p>
+        </div>
+    </section>
 
-        <section id="simulador" class="interactive-box">
-            <h2>Bio-Monitoramento em Tempo Real</h2>
-            <p>Selecione uma cultura para simular a análise de dados dos sensores de campo:</p>
+    <main class="container">
+        <section class="interactive-section">
+            <h2>Painel Global vs. Nacional</h2>
+            <p class="instruction">Clique nos botões para alternar as lentes e analisar as métricas reais do agronegócio e meio ambiente:</p>
             
-            <div class="controls">
-                <button onclick="analisarCultura('Soja')">Analisar Soja</button>
-                <button onclick="analisarCultura('Milho')">Analisar Milho</button>
-                <button onclick="analisarCultura('Trigo')">Analisar Trigo</button>
+            <div class="button-group">
+                <button id="btn-brasil" class="active" onclick="mostrarDados('brasil')">Ver Dados do Brasil</button>
+                <button id="btn-mundo" onclick="mostrarDados('mundo')">Ver Dados Globais</button>
             </div>
 
-            <div id="painel-dados" class="painel-dados escondido">
-                <h3>Relatório de Sustentabilidade: <span id="nome-cultura">-</span></h3>
-                <div class="metricas">
-                    <div class="card-metrica">Umidade do Solo: <strong id="val-umidade">-</strong></div>
-                    <div class="card-metrica">Eficiência de Carbono: <strong id="val-carbono">-</strong></div>
-                    <div class="card-metrica">Status da Planta: <strong id="val-status">-</strong></div>
+            <div class="dashboard">
+                <div class="data-card animate">
+                    <div class="card-icon">🌱</div>
+                    <h3 id="titulo-preservacao">Área Preservada</h3>
+                    <p class="stat-number" id="dado-preservacao">66%</p>
+                    <p class="stat-desc" id="desc-preservacao">Do território nacional é coberto por vegetação nativa protegida.</p>
+                </div>
+
+                <div class="data-card animate">
+                    <div class="card-icon">🚜</div>
+                    <h3 id="titulo-producao">Liderança de Produção</h3>
+                    <p class="stat-number" id="dado-producao">1º Lugar</p>
+                    <p class="stat-desc" id="desc-producao">Maior exportador mundial de soja, café e açúcar com alta tecnologia.</p>
+                </div>
+
+                <div class="data-card animate">
+                    <div class="card-icon">💧</div>
+                    <h3 id="titulo-tecnologia">Sustentabilidade Aplicada</h3>
+                    <p class="stat-number" id="dado-tecnologia">-80%</p>
+                    <p class="stat-desc" id="desc-tecnologia">Redução no desperdício de água com técnicas de irrigação de precisão.</p>
                 </div>
             </div>
         </section>
 
-        <section id="info" class="cards-section">
-            
+        <section class="gallery-section">
+            <h2>Inovações no Campo 2026</h2>
+            <div class="grid-images">
+                <div class="image-box">
+                    <img src="https://images.unsplash.com/photo-1560493450-b15b2c61ba9f?auto=format&fit=crop&w=500&q=80" alt="Agricultura de Precisão">
+                    <div class="image-title">Monitoramento Computacional</div>
+                </div>
+                <div class="image-box">
+                    <img src="https://images.unsplash.com/photo-1628352081506-83c43123ed6d?auto=format&fit=crop&w=500&q=80" alt="Drones de monitoramento">
+                    <div class="image-title">Drones e Biotecnologia</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Programa Agrinho 2026 &copy; Projetando o Equilíbrio entre Produção e Meio Ambiente.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
