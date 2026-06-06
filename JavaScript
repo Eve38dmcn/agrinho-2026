@@ -1,70 +1,469 @@
-// Banco de dados dinâmico de guias de cultivo
-const guiasCultivo = {
-    girassol: {
-        titulo: "Cultivo de Girassol 🌻",
-        icone: "🌻",
-        passos: [
-            "Escolha um vaso fundo ou solo direto com exposição solar de pelo menos 6 horas diárias.",
-            "Coloque a semente a cerca de 2 centímetros de profundidade na terra rica em matéria orgânica.",
-            "Regue diariamente mantendo a terra úmida, sem encharcar.",
-            "Em 7 a 10 dias você verá o broto romper a terra buscando o sol."
-        ]
-    },
-    tomate: {
-        titulo: "Cultivo de Tomate Cereja 🍅",
-        icone: "🍅",
-        passos: [
-            "Use sementes ou pequenas mudas em solo bem drenado e fofo.",
-            "Mantenha em local ensolarado e instale uma pequena estaca para apoiar o crescimento do caule.",
-            "Regue na base da planta, evitando molhar as folhas para prevenir fungos.",
-            "As primeiras flores amarelas darão origem aos pequenos tomates em poucas semanas."
-        ]
-    },
-    manjericao: {
-        titulo: "Cultivo de Manjericão 🌿",
-        icone: "🌿",
-        passos: [
-            "Plante em vasos com furos no fundo. O manjericão ama terra rica e úmida.",
-            "Deixe o vaso em uma janela que receba o sol da manhã.",
-            "Corte as pontas dos galhos superiores (poda) para que a planta cresça cheia para os lados.",
-            "Colha as folhas maiores sempre de cima para baixo para estimular novas brotações."
-        ]
-    }
+/* ==========================================
+   BRASIL VERDE
+   script.js
+========================================== */
+
+/* ===========================
+   BARRA DE PROGRESSO
+=========================== */
+
+window.onscroll = function () {
+
+    barraProgresso();
+    mostrarBotao();
+
 };
 
-function atualizarGuia() {
-    const seletor = document.getElementById('escolha-semente');
-    const valorSelecionado = seletor.value;
-    
-    const painel = document.getElementById('painel-instrucoes');
-    const elementoIlustra = document.getElementById('ilustra-passo');
-    const elementoTitulo = document.getElementById('titulo-passo');
-    const elementoLista = document.getElementById('lista-passos');
+function barraProgresso() {
 
-    // Se o usuário não selecionou nenhuma semente válida, esconde o painel
-    if (!valorSelecionado) {
-        painel.classList.add('escondido');
-        return;
-    }
+    let altura =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
 
-    // Busca os dados no objeto baseado na semente escolhida
-    const dadosPlanta = guiasCultivo[valorSelecionado];
+    let rolado =
+        document.documentElement.scrollTop;
 
-    // Atualiza a tela com animação e textos limpos
-    elementoIlustra.innerText = dadosPlanta.icone;
-    elementoTitulo.innerText = dadosPlanta.titulo;
-    
-    // Limpa a lista antiga para construir a nova
-    elementoLista.innerHTML = "";
-    
-    // Varre os passos e cria elementos <li> para cada um
-    dadosPlanta.passos.forEach(passo => {
-        const itemLista = document.createElement('li');
-        itemLista.innerText = passo;
-        elementoLista.appendChild(itemLista);
-    });
+    let porcentagem =
+        (rolado / altura) * 100;
 
-    // Exibe o painel atualizado
-    painel.classList.remove('escondido');
+    document.getElementById(
+        "progresso"
+    ).style.width = porcentagem + "%";
+
 }
 
+/* ===========================
+   BOTÃO TOPO
+=========================== */
+
+function mostrarBotao() {
+
+    let botao =
+        document.getElementById("topo");
+
+    if (document.body.scrollTop > 300 ||
+        document.documentElement.scrollTop > 300) {
+
+        botao.style.display = "block";
+
+    } else {
+
+        botao.style.display = "none";
+
+    }
+
+}
+
+function voltarTopo() {
+
+    window.scrollTo({
+
+        top: 0,
+
+        behavior: "smooth"
+
+    });
+
+}
+
+/* ===========================
+   MODO ESCURO
+=========================== */
+
+function trocarTema() {
+
+    document.body.classList.toggle("dark");
+
+}
+
+/* ===========================
+   CURIOSIDADES
+=========================== */
+
+let curiosidades = [
+
+    "🌳 O Brasil possui uma das maiores biodiversidades do planeta.",
+
+    "🦜 O território brasileiro abriga milhares de espécies de aves.",
+
+    "🚜 Drones ajudam a monitorar áreas naturais e produtivas.",
+
+    "☀️ A energia solar cresce a cada ano no Brasil.",
+
+    "💧 Sensores inteligentes ajudam a economizar água.",
+
+    "🌱 A diversidade vegetal contribui para o equilíbrio ambiental.",
+
+    "🍃 Árvores ajudam a reduzir a temperatura das cidades.",
+
+    "🌎 Pequenas atitudes sustentáveis geram grandes resultados."
+
+];
+
+function mostrarCuriosidade() {
+
+    let numero =
+        Math.floor(
+            Math.random() * curiosidades.length
+        );
+
+    document.getElementById(
+        "curiosidade"
+    ).innerHTML =
+        curiosidades[numero];
+
+}
+
+/* ===========================
+   QUIZ
+=========================== */
+
+function certo() {
+
+    document.getElementById(
+        "resultado"
+    ).innerHTML =
+
+        "✅ Muito bem! A rotação de culturas ajuda a conservar o solo e reduzir o desgaste da terra.";
+
+    document.getElementById(
+        "resultado"
+    ).style.color = "green";
+
+}
+
+function errado() {
+
+    document.getElementById(
+        "resultado"
+    ).innerHTML =
+
+        "❌ Resposta incorreta. Tente novamente!";
+
+    document.getElementById(
+        "resultado"
+    ).style.color = "red";
+
+}
+
+/* ===========================
+   FRASES MOTIVACIONAIS
+=========================== */
+
+let frases = [
+
+    "🌎 Cuidar da natureza é investir no futuro.",
+
+    "🌱 Toda grande mudança começa com uma pequena atitude.",
+
+    "💚 Sustentabilidade é responsabilidade compartilhada.",
+
+    "☀️ Tecnologia e natureza podem caminhar juntas.",
+
+    "🍃 Preservar hoje é garantir o amanhã.",
+
+    "🌳 O futuro floresce quando protegemos o presente.",
+
+    "🚜 Inovação também significa respeito ao meio ambiente."
+
+];
+
+function trocarFrase() {
+
+    let numero =
+        Math.floor(
+            Math.random() * frases.length
+        );
+
+    document.getElementById(
+        "frase"
+    ).innerHTML =
+        frases[numero];
+
+}
+
+/* ===========================
+   CONTADORES ANIMADOS
+=========================== */
+
+let iniciou = false;
+
+window.addEventListener("scroll", function () {
+
+    let secao =
+        document.querySelector(".numeros");
+
+    if (!secao) return;
+
+    let posicao =
+        secao.getBoundingClientRect().top;
+
+    let tela =
+        window.innerHeight;
+
+    if (posicao < tela && iniciou == false) {
+
+        iniciou = true;
+
+        contador(
+            "contador1",
+            46000,
+            40
+        );
+
+        contador(
+            "contador2",
+            6,
+            400
+        );
+
+        contador(
+            "contador3",
+            150,
+            20
+        );
+
+    }
+
+});
+
+function contador(id, alvo, velocidade) {
+
+    let numero = 0;
+
+    let intervalo = setInterval(function () {
+
+        numero++;
+
+        document.getElementById(id)
+            .innerHTML = numero + "+";
+
+        if (numero >= alvo) {
+
+            clearInterval(intervalo);
+
+        }
+
+    }, velocidade);
+
+}
+
+/* ===========================
+   GALERIA
+=========================== */
+
+let imagens = [
+
+    "img/campo.jpg",
+
+    "img/floresta.jpg",
+
+    "img/drone.jpg",
+
+    "img/energia.jpg"
+
+];
+
+let atual = 0;
+
+function trocarImagem() {
+
+    let galeria =
+        document.querySelectorAll(
+            ".fotos img"
+        );
+
+    if (galeria.length == 0) return;
+
+    atual++;
+
+    if (atual >= imagens.length) {
+
+        atual = 0;
+
+    }
+
+    galeria[0].src =
+        imagens[atual];
+
+}
+
+setInterval(
+    trocarImagem,
+    5000
+);
+
+/* ===========================
+   ANIMAÇÃO DOS CARDS
+=========================== */
+
+let cards =
+    document.querySelectorAll(
+        ".card"
+    );
+
+window.addEventListener(
+    "scroll",
+    function () {
+
+        cards.forEach(function (card) {
+
+            let topo =
+                card.getBoundingClientRect().top;
+
+            if (topo < window.innerHeight - 80) {
+
+                card.style.opacity = "1";
+
+                card.style.transform =
+                    "translateY(0px)";
+
+            }
+
+        });
+
+    }
+);
+
+cards.forEach(function (card) {
+
+    card.style.opacity = "0";
+
+    card.style.transform =
+        "translateY(50px)";
+
+    card.style.transition =
+        "1s";
+
+});
+
+/* ===========================
+   DATA E HORA
+=========================== */
+
+function relogio() {
+
+    let hoje =
+        new Date();
+
+    let hora =
+        hoje.getHours();
+
+    let minuto =
+        hoje.getMinutes();
+
+    if (minuto < 10) {
+
+        minuto = "0" + minuto;
+
+    }
+
+    let elemento =
+        document.getElementById(
+            "relogio"
+        );
+
+    if (elemento) {
+
+        elemento.innerHTML =
+            "🕒 " +
+            hora +
+            ":" +
+            minuto;
+
+    }
+
+}
+
+setInterval(
+    relogio,
+    1000
+);
+
+/* ===========================
+   MENSAGEM DE BOAS-VINDAS
+=========================== */
+
+window.onload = function () {
+
+    mostrarCuriosidade();
+
+    trocarFrase();
+
+    relogio();
+
+    console.log(
+        "Brasil Verde carregado com sucesso!"
+    );
+
+};
+
+/* ===========================
+   EFEITO NOS BOTÕES
+=========================== */
+
+let botoes =
+    document.querySelectorAll(
+        "button"
+    );
+
+botoes.forEach(function (botao) {
+
+    botao.addEventListener(
+        "mouseenter",
+        function () {
+
+            botao.style.transform =
+                "scale(1.05)";
+
+        }
+    );
+
+    botao.addEventListener(
+        "mouseleave",
+        function () {
+
+            botao.style.transform =
+                "scale(1)";
+
+        }
+    );
+
+});
+
+/* ===========================
+   CONTADOR DE VISITAS
+=========================== */
+
+let visitas =
+    localStorage.getItem(
+        "visitas"
+    );
+
+if (visitas == null) {
+
+    visitas = 1;
+
+} else {
+
+    visitas = Number(visitas) + 1;
+
+}
+
+localStorage.setItem(
+    "visitas",
+    visitas
+);
+
+let local =
+    document.getElementById(
+        "visitas"
+    );
+
+if (local) {
+
+    local.innerHTML =
+        "👥 Visitantes: " +
+        visitas;
+
+}
