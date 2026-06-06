@@ -1,1 +1,70 @@
+// Banco de dados dinâmico de guias de cultivo
+const guiasCultivo = {
+    girassol: {
+        titulo: "Cultivo de Girassol 🌻",
+        icone: "🌻",
+        passos: [
+            "Escolha um vaso fundo ou solo direto com exposição solar de pelo menos 6 horas diárias.",
+            "Coloque a semente a cerca de 2 centímetros de profundidade na terra rica em matéria orgânica.",
+            "Regue diariamente mantendo a terra úmida, sem encharcar.",
+            "Em 7 a 10 dias você verá o broto romper a terra buscando o sol."
+        ]
+    },
+    tomate: {
+        titulo: "Cultivo de Tomate Cereja 🍅",
+        icone: "🍅",
+        passos: [
+            "Use sementes ou pequenas mudas em solo bem drenado e fofo.",
+            "Mantenha em local ensolarado e instale uma pequena estaca para apoiar o crescimento do caule.",
+            "Regue na base da planta, evitando molhar as folhas para prevenir fungos.",
+            "As primeiras flores amarelas darão origem aos pequenos tomates em poucas semanas."
+        ]
+    },
+    manjericao: {
+        titulo: "Cultivo de Manjericão 🌿",
+        icone: "🌿",
+        passos: [
+            "Plante em vasos com furos no fundo. O manjericão ama terra rica e úmida.",
+            "Deixe o vaso em uma janela que receba o sol da manhã.",
+            "Corte as pontas dos galhos superiores (poda) para que a planta cresça cheia para os lados.",
+            "Colha as folhas maiores sempre de cima para baixo para estimular novas brotações."
+        ]
+    }
+};
+
+function atualizarGuia() {
+    const seletor = document.getElementById('escolha-semente');
+    const valorSelecionado = seletor.value;
+    
+    const painel = document.getElementById('painel-instrucoes');
+    const elementoIlustra = document.getElementById('ilustra-passo');
+    const elementoTitulo = document.getElementById('titulo-passo');
+    const elementoLista = document.getElementById('lista-passos');
+
+    // Se o usuário não selecionou nenhuma semente válida, esconde o painel
+    if (!valorSelecionado) {
+        painel.classList.add('escondido');
+        return;
+    }
+
+    // Busca os dados no objeto baseado na semente escolhida
+    const dadosPlanta = guiasCultivo[valorSelecionado];
+
+    // Atualiza a tela com animação e textos limpos
+    elementoIlustra.innerText = dadosPlanta.icone;
+    elementoTitulo.innerText = dadosPlanta.titulo;
+    
+    // Limpa a lista antiga para construir a nova
+    elementoLista.innerHTML = "";
+    
+    // Varre os passos e cria elementos <li> para cada um
+    dadosPlanta.passos.forEach(passo => {
+        const itemLista = document.createElement('li');
+        itemLista.innerText = passo;
+        elementoLista.appendChild(itemLista);
+    });
+
+    // Exibe o painel atualizado
+    painel.classList.remove('escondido');
+}
 
