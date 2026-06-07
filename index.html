@@ -1,416 +1,198 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sementes do Futuro</title>
 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
 
-    <title>Brasil Verde - Conectando Natureza e Futuro</title>
-
-    <link rel="stylesheet" href="style.css">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- Barra de progresso -->
+<header>
 
-    <div id="progresso"></div>
+<div class="logo">
+🌱 Sementes do Futuro
+</div>
 
-    <!-- Botão voltar -->
+<nav>
+<a href="#inicio">Início</a>
+<a href="#sobre">Sobre</a>
+<a href="#pilares">Pilares</a>
+<a href="#contato">Contato</a>
+</nav>
 
-    <button id="topo" onclick="voltarTopo()">
-        ↑
-    </button>
+</header>
 
-    <!-- Menu -->
+<section id="inicio" class="hero">
 
-    <header>
+<div class="hero-overlay"></div>
 
-        <div class="logo">
-            🌱 Brasil Verde
-        </div>
+<div class="hero-content">
 
-        <nav>
+<h1>Sementes do Futuro</h1>
 
-            <a href="#inicio">Início</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#biodiversidade">Biodiversidade</a>
-            <a href="#tecnologia">Tecnologia</a>
-            <a href="#curiosidades">Curiosidades</a>
-            <a href="#galeria">Galeria</a>
-            <a href="#quiz">Quiz</a>
-            <a href="#fontes">Fontes</a>
+<p class="subtitulo">
+Cultivando conexões entre o campo e a cidade para um amanhã mais sustentável.
+</p>
 
-        </nav>
+<p class="descricao">
+O desenvolvimento acontece quando diferentes realidades trabalham juntas.
+Campo e cidade compartilham conhecimentos, recursos e oportunidades que ajudam
+a construir uma sociedade mais equilibrada e preparada para os desafios do futuro.
+</p>
 
-        <button class="modo" onclick="trocarTema()">
-            🌙
-        </button>
+<a href="#sobre" class="btn">
+Conheça Nossa Missão
+</a>
 
-    </header>
+</div>
 
-    <!-- Hero -->
+</section>
 
-    <section class="hero" id="inicio">
+<section id="sobre" class="sobre">
 
-        <div class="hero-texto">
+<h2>Sobre Nós</h2>
 
-            <h1>
-                O Futuro Cresce com Boas Ideias
-            </h1>
+<div class="linha"></div>
 
-            <p>
+<div class="texto">
 
-                Natureza, inovação e responsabilidade ajudam a construir
-                um mundo mais sustentável para as próximas gerações.
+<p>
+A Sementes do Futuro é uma iniciativa dedicada a destacar a importância da conexão
+entre o campo e a cidade.
+</p>
 
-            </p>
+<p>
+Acreditamos que a produção de alimentos, a inovação tecnológica, a preservação
+ambiental e a educação caminham lado a lado na construção de um futuro sustentável.
+</p>
 
-            <button onclick="document.getElementById('sobre').scrollIntoView()">
-                Descobrir
-            </button>
+<p>
+Nosso objetivo é inspirar ações conscientes, incentivar a valorização do trabalho
+rural e mostrar como a colaboração entre diferentes comunidades gera benefícios
+para toda a sociedade.
+</p>
 
-        </div>
+</div>
 
-    </section>
+</section>
 
-    <!-- Sobre -->
+<section id="pilares" class="pilares">
 
-    <section id="sobre">
+<h2>Nossos Pilares</h2>
 
-        <h2>
-            🌳 Um Brasil cheio de possibilidades
-        </h2>
+<div class="linha"></div>
 
-        <p>
+<div class="cards">
 
-            O Brasil possui uma das maiores biodiversidades do planeta
-            e reúne diferentes ecossistemas importantes para a vida.
+<div class="card">
 
-        </p>
+<div class="icone">🌱</div>
 
-        <p>
+<h3>Sustentabilidade</h3>
 
-            A tecnologia vem ajudando a preservar recursos naturais,
-            melhorar a produção de alimentos e reduzir impactos
-            ambientais.
+<p>
+Promovemos práticas responsáveis que ajudam a preservar os recursos naturais para as futuras gerações.
+</p>
 
-        </p>
+</div>
 
-        <div class="numeros">
+<div class="card">
 
-            <div class="numero">
-                <h3 id="contador1">0</h3>
-                <p>Espécies de plantas catalogadas</p>
-            </div>
+<div class="icone">💡</div>
 
-            <div class="numero">
-                <h3 id="contador2">0</h3>
-                <p>Biomas brasileiros</p>
-            </div>
+<h3>Inovação</h3>
 
-            <div class="numero">
-                <h3 id="contador3">0</h3>
-                <p>Tecnologias sustentáveis</p>
-            </div>
+<p>
+A tecnologia e o conhecimento impulsionam soluções que tornam a produção mais eficiente e sustentável.
+</p>
 
-        </div>
+</div>
 
-    </section>
+<div class="card">
 
-    <!-- Biodiversidade -->
+<div class="icone">🤝</div>
 
-    <section id="biodiversidade">
+<h3>Comunidade</h3>
 
-        <h2>
-            🦜 Biodiversidade
-        </h2>
+<p>
+Fortalecemos a cooperação entre pessoas, compartilhando experiências e construindo oportunidades.
+</p>
 
-        <div class="cards">
+</div>
 
-            <div class="card">
+<div class="card">
 
-                <h3>Florestas</h3>
+<div class="icone">🚜</div>
 
-                <p>
+<h3>Valorização do Campo</h3>
 
-                    As florestas ajudam na conservação da água,
-                    do clima e da vida animal.
+<p>
+Reconhecemos a importância dos produtores rurais e sua contribuição para o desenvolvimento da sociedade.
+</p>
 
-                </p>
+</div>
 
-            </div>
+</div>
 
-            <div class="card">
+</section>
 
-                <h3>Fauna</h3>
+<section class="destaque">
 
-                <p>
+<h2>Conexões que Transformam</h2>
 
-                    O Brasil abriga milhares de espécies
-                    de animais distribuídos em vários biomas.
+<div class="linha"></div>
 
-                </p>
+<p>
+O alimento que chega à mesa, a tecnologia presente no cotidiano e os recursos utilizados diariamente demonstram como campo e cidade estão conectados.
+</p>
 
-            </div>
+<p>
+Ao fortalecer essa relação, criamos oportunidades para o crescimento econômico, a preservação ambiental e a melhoria da qualidade de vida de todos.
+</p>
 
-            <div class="card">
+</section>
 
-                <h3>Flora</h3>
+<section id="contato" class="contato">
 
-                <p>
+<h2>Fale Conosco</h2>
 
-                    A diversidade de plantas é essencial
-                    para o equilíbrio ambiental.
+<div class="linha"></div>
 
-                </p>
+<p>
+Tem alguma ideia, sugestão ou deseja saber mais sobre nosso projeto?
+Entre em contato e faça parte dessa transformação.
+</p>
 
-            </div>
+<form id="formulario">
 
-        </div>
+<input type="text" placeholder="Seu Nome" required>
 
-    </section>
+<input type="email" placeholder="Seu E-mail" required>
 
-    <!-- Tecnologia -->
+<textarea placeholder="Sua Mensagem" required></textarea>
 
-    <section id="tecnologia">
+<button type="submit">
+📩 Enviar Mensagem
+</button>
 
-        <h2>
-            🚜 Tecnologia e Sustentabilidade
-        </h2>
+</form>
 
-        <div class="cards">
+</section>
 
-            <div class="card">
+<footer>
 
-                <h3>Drones</h3>
+<p>
+© 2026 Sementes do Futuro — Conexões para um futuro sustentável.
+</p>
 
-                <p>
+</footer>
 
-                    Auxiliam no monitoramento do ambiente
-                    e das áreas de produção.
-
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Sensores</h3>
-
-                <p>
-
-                    Permitem o uso eficiente da água.
-
-                </p>
-
-            </div>
-
-            <div class="card">
-
-                <h3>Energia Solar</h3>
-
-                <p>
-
-                    Fonte limpa e renovável para diversas atividades.
-
-                </p>
-
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Curiosidades -->
-
-    <section id="curiosidades">
-
-        <h2>
-            💡 Curiosidades
-        </h2>
-
-        <p id="curiosidade">
-
-            Clique no botão para descobrir uma curiosidade.
-
-        </p>
-
-        <button onclick="mostrarCuriosidade()">
-            Nova Curiosidade
-        </button>
-
-    </section>
-
-    <!-- Galeria -->
-
-    <section id="galeria">
-
-        <h2>
-            📸 Galeria
-        </h2>
-
-        <div class="fotos">
-
-            <img src="img/campo.jpg">
-
-            <img src="img/floresta.jpg">
-
-            <img src="img/drone.jpg">
-
-            <img src="img/energia.jpg">
-
-        </div>
-
-    </section>
-
-    <!-- Linha do tempo -->
-
-    <section id="linhaTempo">
-
-        <h2>
-            📅 Caminho da Inovação
-        </h2>
-
-        <div class="timeline">
-
-            <div class="evento">
-                <h3>Passado</h3>
-                <p>Conhecimento tradicional e respeito pela natureza.</p>
-            </div>
-
-            <div class="evento">
-                <h3>Presente</h3>
-                <p>Uso de tecnologias sustentáveis.</p>
-            </div>
-
-            <div class="evento">
-                <h3>Futuro</h3>
-                <p>Mais inovação e preservação ambiental.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-    <!-- Quiz -->
-
-    <section id="quiz">
-
-        <h2>
-            🎮 Quiz Verde
-        </h2>
-
-        <h3>
-
-            Qual destas práticas ajuda a conservar o solo?
-
-        </h3>
-
-        <button onclick="errado()">
-            Queimar a vegetação
-        </button>
-
-        <button onclick="certo()">
-            Rotação de culturas
-        </button>
-
-        <button onclick="errado()">
-            Desmatamento
-        </button>
-
-        <p id="resultado"></p>
-
-    </section>
-
-    <!-- Frase -->
-
-    <section class="frase">
-
-        <h2>
-            🌎 Mensagem do Dia
-        </h2>
-
-        <p id="frase">
-
-            Pequenas atitudes podem gerar grandes mudanças.
-
-        </p>
-
-        <button onclick="trocarFrase()">
-            Nova Mensagem
-        </button>
-
-    </section>
-
-    <!-- Fontes -->
-
-    <section id="fontes">
-
-        <h2>
-            📚 Fontes e Créditos
-        </h2>
-
-        <h3>Textos</h3>
-
-        <ul>
-
-            <li>EMBRAPA - www.embrapa.br</li>
-
-            <li>FAO - www.fao.org</li>
-
-            <li>IBGE - www.ibge.gov.br</li>
-
-            <li>IPAM Amazônia - www.ipam.org.br</li>
-
-        </ul>
-
-        <h3>Imagens sugeridas</h3>
-
-        <ul>
-
-            <li>Pexels - www.pexels.com</li>
-
-            <li>Unsplash - www.unsplash.com</li>
-
-            <li>Pixabay - www.pixabay.com</li>
-
-        </ul>
-
-    </section>
-
-    <!-- Rodapé -->
-
-    <footer>
-
-        <h2>
-            🌱 Brasil Verde
-        </h2>
-
-        <p>
-
-            Conectando natureza, tecnologia e esperança
-            para um futuro sustentável.
-
-        </p>
-
-        <p>
-
-            Desenvolvido para fins educativos.
-
-        </p>
-
-    </footer>
-
-    <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
-
 </html>
-<div id="relogio"></div>
-
-<div id="visitas"></div>
