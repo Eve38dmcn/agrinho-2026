@@ -1,1 +1,2 @@
 # agrinho-2026
+O objetivo do site é promover a conscientizacão sobre a importância da conexão entre compo e cidade, mostrando como a coopereção, inovação e a valorização do trabalho rural contribuem para a construção de um futuro melhor pra todos. Sementes do futuro tem como objetivo inspirar pessoas a reconhecerem que compo e cidade fazem parte de uma mesma rede de desenvolvimento, como objetivo cultivar ideias e atitudes que aproximem o compo e a cidade, promovendo a sustentabilidade, a cooperação e a construção de um futuro mais próspero para as próximas geraçães.
